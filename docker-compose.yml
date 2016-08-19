@@ -3,7 +3,7 @@ services:
     web:
         build:
             context: .
-        image: ympd
+        image: ympd:bilenkis2
         ports:
             - "8097:80"
         restart: always
