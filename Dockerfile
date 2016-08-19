@@ -12,7 +12,7 @@ RUN set -xe \
         libssl-dev \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
 
-COPY . /usr/src/
+COPY . /usr/src/ympd
 
 RUN cd /usr/src/ympd && \
     mkdir -p build && \
