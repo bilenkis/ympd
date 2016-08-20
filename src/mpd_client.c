@@ -568,8 +568,8 @@ int mpd_put_queue(char *buffer, unsigned int offset)
 
    			if(mpd_song_get_tag(song, MPD_TAG_ARTIST, 0) != NULL)
    		 	{
-   		     cur += json_emit_raw_str(cur, end - cur, ",\"artist\":");
-   		     cur += json_emit_quoted_str(cur, end - cur, mpd_song_get_tag(song, MPD_TAG_ARTIST, 0));
+                cur += json_emit_raw_str(cur, end - cur, ",\"artist\":");
+                cur += json_emit_quoted_str(cur, end - cur, mpd_song_get_tag(song, MPD_TAG_ARTIST, 0));
    		 	}
 
             cur += json_emit_raw_str(cur, end - cur, "},");
