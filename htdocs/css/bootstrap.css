@@ -1403,7 +1403,7 @@ table {
   background-color: transparent;
 }
 th {
-  text-align: left;
+  text-align: center;
 }
 .table {
   width: 100%;
@@ -1415,7 +1415,7 @@ th {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 8px;
+  padding: 4px;
   line-height: 1.428571429;
   vertical-align: top;
   border-top: 1px solid #ddd;
