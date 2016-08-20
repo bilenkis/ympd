@@ -209,7 +209,6 @@ function webSocketConnect() {
 
             switch (obj.type) {
                 case "queue":
-					// console.log(obj.data);
                     if(current_app !== 'queue')
                         break;
 
