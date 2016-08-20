@@ -209,19 +209,20 @@ function webSocketConnect() {
 
             switch (obj.type) {
                 case "queue":
+					// console.log(obj.data);
                     if(current_app !== 'queue')
                         break;
 
                     $('#salamisandwich > tbody').empty();
-                    for (var song in obj.data) {
+                    for (var song in obj.data) { 
                         var minutes = Math.floor(obj.data[song].duration / 60);
                         var seconds = obj.data[song].duration - minutes * 60;
 
                         $('#salamisandwich > tbody').append(
                             "<tr trackid=\"" + obj.data[song].id + "\"><td>" + (obj.data[song].pos + 1) + "</td>" +
                                 "<td>"+ obj.data[song].title +"</td>" + 
-                                "<td>"+ obj.data.artist +"</td>" + 
-                                "<td>"+ minutes + ":" + (seconds < 10 ? '0' : '') + seconds +
+                                "<td>"+ obj.data[song].artist +"</td>" + 
+                                '<td align="center">'+ minutes + ":" + (seconds < 10 ? '0' : '') + seconds +
                         "</td><td></td></tr>");
                     }
 
