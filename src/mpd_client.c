@@ -572,6 +572,12 @@ int mpd_put_queue(char *buffer, unsigned int offset)
    		     cur += json_emit_quoted_str(cur, end - cur, mpd_song_get_tag(song, MPD_TAG_ARTIST, 0));
    		 	}
 
+            if(mpd_song_get_tag(song, MPD_TAG_ALBUM, 0) != NULL)
+            {
+                cur += json_emit_raw_str(cur, end - cur, ",\"album\":");
+                cur += json_emit_quoted_str(cur, end - cur, mpd_song_get_tag(song, MPD_TAG_ALBUM, 0));
+            }
+
             cur += json_emit_raw_str(cur, end - cur, "},");
         }
         mpd_entity_free(entity);
@@ -634,6 +640,12 @@ int mpd_put_browse(char *buffer, char *path, unsigned int offset)
 				    cur += json_emit_raw_str(cur, end - cur, ",\"artist\":");
 				    cur += json_emit_quoted_str(cur, end - cur, mpd_song_get_tag(song, MPD_TAG_ARTIST, 0));
 				}
+
+                if(mpd_song_get_tag(song, MPD_TAG_ALBUM, 0) != NULL)
+                {
+                    cur += json_emit_raw_str(cur, end - cur, ",\"album\":");
+                    cur += json_emit_quoted_str(cur, end - cur, mpd_song_get_tag(song, MPD_TAG_ALBUM, 0));
+                }
 
                 cur += json_emit_raw_str(cur, end - cur, "},");
                 break;
