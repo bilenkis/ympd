@@ -222,7 +222,7 @@ function webSocketConnect() {
                                 "<td>"+ obj.data[song].title +"</td>" + 
                                 "<td>"+ obj.data[song].album +"</td>" + 
                                 "<td>"+ obj.data[song].artist +"</td>" + 
-                                '<td align="center">'+ minutes + ":" + (seconds < 10 ? '0' : '') + seconds +
+                                '<td>'+ minutes + ":" + (seconds < 10 ? '0' : '') + seconds +
                         "</td><td></td></tr>");
                     }
 
@@ -297,7 +297,7 @@ function webSocketConnect() {
                                     "<td>" + obj.data[item].title +"</td>" +
                                     "<td>" + obj.data[item].album +"</td>" +
                                     "<td>" + obj.data[item].artist +"</td>" +
-                                    '<td align="center">'+ minutes + ":" + (seconds < 10 ? '0' : '') + seconds +
+                                    '<td>'+ minutes + ":" + (seconds < 10 ? '0' : '') + seconds +
                                     "</td><td></td></tr>"
                                 );
                                 break;
